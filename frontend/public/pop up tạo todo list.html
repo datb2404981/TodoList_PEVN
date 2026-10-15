@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="web_dashboard" name="shell-type" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @layer base {
+        html,
+        body {
+          margin: 0;
+          padding: 0;
+        }
+        body {
+          overscroll-behavior: none;
+        }
+        main > :first-child {
+          margin-top: 0 !important;
+        }
+        main > :last-child {
+          margin-bottom: 0 !important;
+        }
+      }
+      ::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-tint": "#615e57",
+              "surface-container-highest": "#e3e2e1",
+              "on-primary": "#ffffff",
+              surface: "#faf9f8",
+              "primary-container": "#37352f",
+              "outline-variant": "#cbc6bc",
+              "tertiary-fixed": "#bceecc",
+              "inverse-primary": "#cbc6bd",
+              "on-primary-fixed": "#1d1c16",
+              "on-surface-variant": "#49473f",
+              "surface-container-low": "#f4f3f2",
+              "on-primary-container": "#a19d95",
+              "on-tertiary-fixed": "#002111",
+              tertiary: "#002614",
+              "tertiary-container": "#0c3d25",
+              "surface-container-high": "#e9e8e7",
+              outline: "#7a776e",
+              "surface-variant": "#e3e2e1",
+              "on-surface": "#1a1c1c",
+              "on-secondary-container": "#3d5981",
+              "surface-container-lowest": "#ffffff",
+              primary: "#21201a",
+              "on-error-container": "#93000a",
+              "secondary-fixed-dim": "#acc8f6",
+              "primary-fixed-dim": "#cbc6bd",
+              "on-tertiary": "#ffffff",
+              "secondary-fixed": "#d4e3ff",
+              "error-container": "#ffdad6",
+              background: "#faf9f8",
+              "inverse-surface": "#2f3130",
+              "on-primary-fixed-variant": "#494740",
+              "on-background": "#1a1c1c",
+              "on-secondary-fixed": "#001c3a",
+              "on-tertiary-fixed-variant": "#214f36",
+              "on-secondary-fixed-variant": "#2b486f",
+              "inverse-on-surface": "#f1f0ef",
+              "on-tertiary-container": "#78a889",
+              "on-secondary": "#ffffff",
+              "secondary-container": "#b4d0ff",
+              error: "#ba1a1a",
+              "surface-bright": "#faf9f8",
+              "primary-fixed": "#e7e2d9",
+              "on-error": "#ffffff",
+              "surface-dim": "#dadad9",
+              "surface-container": "#eeeeed",
+              "tertiary-fixed-dim": "#a0d2b1",
+              secondary: "#435f88",
+            },
+            borderRadius: {
+              DEFAULT: "0.125rem",
+              lg: "0.25rem",
+              xl: "0.5rem",
+              full: "0.75rem",
+            },
+            spacing: {
+              "space-xs": "0.25rem",
+              margin: "1.5rem",
+              "space-lg": "1rem",
+              "space-xl": "1.5rem",
+              "space-md": "0.75rem",
+              "gutter-lg": "1.5rem",
+              gutter: "1rem",
+              "margin-desktop": "3rem",
+              "space-sm": "0.5rem",
+              "margin-mobile": "1rem",
+              "gutter-sm": "0.5rem",
+            },
+            fontFamily: {
+              "body-md": ["Inter"],
+              "headline-xl": ["Inter"],
+              "headline-lg": ["Inter"],
+              "body-sm": ["Inter"],
+              "label-md": ["Inter"],
+              "body-lg": ["Inter"],
+              "headline-xl-mobile": ["Inter"],
+              "headline-md": ["Inter"],
+              "label-xs": ["Inter"],
+              "label-sm": ["Inter"],
+              "headline-sm": ["Inter"],
+            },
+            fontSize: {
+              "body-md": [
+                "14px",
+                { lineHeight: "20px", letterSpacing: "0em", fontWeight: "400" },
+              ],
+              "headline-xl": [
+                "40px",
+                { lineHeight: "48px", letterSpacing: "-0.03em", fontWeight: "700" },
+              ],
+              "headline-lg": [
+                "30px",
+                { lineHeight: "38px", letterSpacing: "-0.02em", fontWeight: "600" },
+              ],
+              "body-sm": [
+                "12px",
+                { lineHeight: "16px", letterSpacing: "0em", fontWeight: "400" },
+              ],
+              "label-md": [
+                "14px",
+                { lineHeight: "18px", letterSpacing: "0em", fontWeight: "500" },
+              ],
+              "body-lg": [
+                "16px",
+                { lineHeight: "24px", letterSpacing: "-0.005em", fontWeight: "400" },
+              ],
+              "headline-xl-mobile": [
+                "30px",
+                { lineHeight: "38px", letterSpacing: "-0.02em", fontWeight: "700" },
+              ],
+              "headline-md": [
+                "24px",
+                { lineHeight: "32px", letterSpacing: "-0.015em", fontWeight: "600" },
+              ],
+              "label-xs": [
+                "11px",
+                { lineHeight: "14px", letterSpacing: "0.02em", fontWeight: "600" },
+              ],
+              "label-sm": [
+                "12px",
+                { lineHeight: "16px", letterSpacing: "0.01em", fontWeight: "500" },
+              ],
+              "headline-sm": [
+                "20px",
+                { lineHeight: "26px", letterSpacing: "-0.01em", fontWeight: "600" },
+              ],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-surface font-body-md text-body-md text-on-surface antialiased">
+    <div class="">
+      <main class="relative min-h-screen bg-surface-container-lowest">
+        <div class="w-full max-w-3xl mx-auto px-space-xl py-12">
+          <div class="flex flex-col w-full">
+            <div class="mb-space-xl">
+              <div
+                class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-space-xs"
+              >
+                Thứ Tư, 16 Tháng 10
+              </div>
+              <h1
+                class="font-headline-lg text-headline-lg text-primary tracking-tight font-bold outline-none cursor-text"
+              >
+                Hôm nay
+              </h1>
+              <p
+                class="font-body-md text-body-md text-on-surface-variant mt-1 leading-relaxed"
+              >
+                Tập trung vào những điều quan trọng nhất. Giữ tâm trí rõ ràng và nhẹ
+                nhàng.
+              </p>
+            </div>
+            <div class="mb-space-xl">
+              <div
+                class="flex items-center gap-space-sm py-2 px-space-sm rounded-lg hover:bg-surface-container-low transition-colors group cursor-text"
+              >
+                <span class="material-symbols-outlined text-outline-variant text-[20px]"
+                  >add</span
+                ><input
+                  class="w-full bg-transparent font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant outline-none"
+                  placeholder="Thêm nhiệm vụ mới... gõ và nhấn Enter"
+                  type="text"
+                />
+              </div>
+              <div class="h-px w-full bg-surface-container mt-1"></div>
+            </div>
+            <div class="space-y-space-xl">
+              <section>
+                <div class="flex items-center justify-between pb-space-sm mb-space-xs">
+                  <h2
+                    class="font-label-sm text-label-sm font-semibold text-primary uppercase tracking-wider"
+                  >
+                    Cần làm
+                  </h2>
+                  <span class="font-label-xs text-label-xs text-on-surface-variant"
+                    >5 việc</span
+                  >
+                </div>
+                <div class="space-y-0.5">
+                  <div
+                    class="group flex items-center justify-between py-2.5 px-space-sm rounded-lg hover:bg-surface-container-low transition-colors"
+                  >
+                    <div class="flex items-center gap-space-md min-w-0 flex-1">
+                      <button
+                        class="w-4 h-4 rounded-full border border-outline hover:border-primary flex items-center justify-center transition-colors flex-shrink-0 group-hover:border-primary"
+                      ></button
+                      ><span class="font-body-md text-body-md text-on-surface truncate"
+                        >Hoàn thiện thiết kế hệ thống Design System</span
+                      >
+                    </div>
+                    <div
+                      class="flex items-center gap-space-sm text-on-surface-variant font-label-xs text-label-xs flex-shrink-0"
+                    >
+                      <span class="text-error font-medium">17:00</span
+                      ><button
+                        class="opacity-0 group-hover:opacity-100 p-1 hover:text-on-surface transition-opacity"
+                      >
+                        <span class="material-symbols-outlined text-[16px]"
+                          >more_horiz</span
+                        >
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    class="group flex items-center justify-between py-2.5 px-space-sm rounded-lg hover:bg-surface-container-low transition-colors"
+                  >
+                    <div class="flex items-center gap-space-md min-w-0 flex-1">
+                      <button
+                        class="w-4 h-4 rounded-full border border-outline hover:border-primary flex items-center justify-center transition-colors flex-shrink-0 group-hover:border-primary"
+                      ></button
+                      ><span class="font-body-md text-body-md text-on-surface truncate"
+                        >Tối ưu hóa khả năng responsive trên tablet và mobile</span
+                      >
+                    </div>
+                    <div
+                      class="flex items-center gap-space-sm text-on-surface-variant font-label-xs text-label-xs flex-shrink-0"
+                    >
+                      <span class="">Hôm nay</span
+                      ><button
+                        class="opacity-0 group-hover:opacity-100 p-1 hover:text-on-surface transition-opacity"
+                      >
+                        <span class="material-symbols-outlined text-[16px]"
+                          >more_horiz</span
+                        >
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    class="group flex items-center justify-between py-2.5 px-space-sm rounded-lg hover:bg-surface-container-low transition-colors"
+                  >
+                    <div class="flex items-center gap-space-md min-w-0 flex-1">
+                      <button
+                        class="w-4 h-4 rounded-full border border-outline hover:border-primary flex items-center justify-center transition-colors flex-shrink-0 group-hover:border-primary"
+                      ></button
+                      ><span class="font-body-md text-body-md text-on-surface truncate"
+                        >Viết tài liệu hướng dẫn sử dụng và phím tắt thao tác</span
+                      >
+                    </div>
+                    <div
+                      class="flex items-center gap-space-sm text-on-surface-variant font-label-xs text-label-xs flex-shrink-0"
+                    >
+                      <span class="">Ngày mai</span
+                      ><button
+                        class="opacity-0 group-hover:opacity-100 p-1 hover:text-on-surface transition-opacity"
+                      >
+                        <span class="material-symbols-outlined text-[16px]"
+                          >more_horiz</span
+                        >
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    class="group flex items-center justify-between py-2.5 px-space-sm rounded-lg hover:bg-surface-container-low transition-colors"
+                  >
+                    <div class="flex items-center gap-space-md min-w-0 flex-1">
+                      <button
+                        class="w-4 h-4 rounded-full border border-outline hover:border-primary flex items-center justify-center transition-colors flex-shrink-0 group-hover:border-primary"
+                      ></button
+                      ><span class="font-body-md text-body-md text-on-surface truncate"
+                        >Kiểm thử quy trình tạo nhiệm vụ nhanh</span
+                      >
+                    </div>
+                    <div
+                      class="flex items-center gap-space-sm text-on-surface-variant font-label-xs text-label-xs flex-shrink-0"
+                    >
+                      <span class="text-error font-medium">Khẩn cấp</span
+                      ><button
+                        class="opacity-0 group-hover:opacity-100 p-1 hover:text-on-surface transition-opacity"
+                      >
+                        <span class="material-symbols-outlined text-[16px]"
+                          >more_horiz</span
+                        >
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    class="group flex items-center justify-between py-2.5 px-space-sm rounded-lg hover:bg-surface-container-low transition-colors"
+                  >
+                    <div class="flex items-center gap-space-md min-w-0 flex-1">
+                      <button
+                        class="w-4 h-4 rounded-full border border-outline hover:border-primary flex items-center justify-center transition-colors flex-shrink-0 group-hover:border-primary"
+                      ></button
+                      ><span class="font-body-md text-body-md text-on-surface truncate"
+                        >Đánh giá hiệu suất tuần và lập kế hoạch Sprint</span
+                      >
+                    </div>
+                    <div
+                      class="flex items-center gap-space-sm text-on-surface-variant font-label-xs text-label-xs flex-shrink-0"
+                    >
+                      <span class="">26 Th10</span
+                      ><button
+                        class="opacity-0 group-hover:opacity-100 p-1 hover:text-on-surface transition-opacity"
+                      >
+                        <span class="material-symbols-outlined text-[16px]"
+                          >more_horiz</span
+                        >
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="pt-space-md">
+                <div class="flex items-center justify-between pb-space-sm mb-space-xs">
+                  <h2
+                    class="font-label-sm text-label-sm font-semibold text-on-surface-variant uppercase tracking-wider"
+                  >
+                    Đã hoàn thành
+                  </h2>
+                  <span class="font-label-xs text-label-xs text-outline">3 việc</span>
+                </div>
+                <div class="space-y-0.5 opacity-60 hover:opacity-90 transition-opacity">
+                  <div
+                    class="group flex items-center justify-between py-2.5 px-space-sm rounded-lg hover:bg-surface-container-low transition-colors"
+                  >
+                    <div class="flex items-center gap-space-md min-w-0 flex-1">
+                      <button
+                        class="w-4 h-4 rounded-full bg-primary text-on-primary flex items-center justify-center flex-shrink-0"
+                      >
+                        <span class="material-symbols-outlined text-[12px]"
+                          >check</span
+                        ></button
+                      ><span
+                        class="font-body-md text-body-md text-on-surface-variant line-through truncate"
+                        >Đồng bộ dữ liệu Notion với Google Calendar</span
+                      >
+                    </div>
+                    <span class="font-label-xs text-label-xs text-on-surface-variant"
+                      >09:30</span
+                    >
+                  </div>
+                  <div
+                    class="group flex items-center justify-between py-2.5 px-space-sm rounded-lg hover:bg-surface-container-low transition-colors"
+                  >
+                    <div class="flex items-center gap-space-md min-w-0 flex-1">
+                      <button
+                        class="w-4 h-4 rounded-full bg-primary text-on-primary flex items-center justify-center flex-shrink-0"
+                      >
+                        <span class="material-symbols-outlined text-[12px]"
+                          >check</span
+                        ></button
+                      ><span
+                        class="font-body-md text-body-md text-on-surface-variant line-through truncate"
+                        >Chuẩn bị tài liệu thuyết trình Sprint Review</span
+                      >
+                    </div>
+                    <span class="font-label-xs text-label-xs text-on-surface-variant"
+                      >11:15</span
+                    >
+                  </div>
+                  <div
+                    class="group flex items-center justify-between py-2.5 px-space-sm rounded-lg hover:bg-surface-container-low transition-colors"
+                  >
+                    <div class="flex items-center gap-space-md min-w-0 flex-1">
+                      <button
+                        class="w-4 h-4 rounded-full bg-primary text-on-primary flex items-center justify-center flex-shrink-0"
+                      >
+                        <span class="material-symbols-outlined text-[12px]"
+                          >check</span
+                        ></button
+                      ><span
+                        class="font-body-md text-body-md text-on-surface-variant line-through truncate"
+                        >Cập nhật các token màu sắc theo chuẩn Tailwind</span
+                      >
+                    </div>
+                    <span class="font-label-xs text-label-xs text-on-surface-variant"
+                      >14:20</span
+                    >
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

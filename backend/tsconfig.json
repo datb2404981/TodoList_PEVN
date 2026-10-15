@@ -1,23 +1,18 @@
 {
   "compilerOptions": {
-    "target": "ES2022",
-    "module": "nodenext",
+    "module": "commonjs",
+    "target": "es2022",
     "esModuleInterop": true,
-    "lib": ["ES2022"],
-    "strict": true,
+    "sourceMap": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    // Node runs the .ts files directly and tsc only typechecks, so imports
-    // name the .ts files
-    "noEmit": true,
-    "allowImportingTsExtensions": true,
-    // Node strips types one file at a time, so type-only imports must say so
-    // and syntax that needs compiling (enums, namespaces...) isn't allowed
-    "verbatimModuleSyntax": true,
-    "erasableSyntaxOnly": true,
-    "useUnknownInCatchVariables": false,
-    "types": ["node"]
+    "outDir": "dist",
+    "rootDir": "./",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "types": [
+      "node"
+    ]
   },
-  "include": ["src/**/*.ts", "tests/**/*.ts", "eslint.config.ts"],
-  "exclude": ["src/public/*"]
+  "include": ["**/*.ts"],
+  "exclude": ["node_modules", "dist"]
 }

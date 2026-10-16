@@ -39,6 +39,7 @@ const findAll = async (req: Request, res: Response) => {
 const findOne = async (req: Request, res: Response) => {
   try {
     const id = Number(req.params.id);
+    if(isNaN(id)) throw new Error("Invalid todo ID");
     const result = await todoService.findById(id)
     return res.status(200).json(result);
   } catch (err:any) {
